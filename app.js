@@ -450,3 +450,26 @@ document.getElementById("copyOrder").addEventListener("click", async () => {
 
 renderMenu();
 renderCart();
+// COPY FRIEDAYS ADDRESS
+
+const copyAddressButton = document.getElementById("copyAddress");
+
+if (copyAddressButton) {
+  copyAddressButton.addEventListener("click", async () => {
+    const address =
+      "Friedays Talavera, Near Talavera National High School, Diaz St., Brgy. Pag-asa, Talavera, Nueva Ecija.";
+
+    const buttonText = document.getElementById("copyAddressText");
+
+    try {
+      await navigator.clipboard.writeText(address);
+      buttonText.textContent = "ADDRESS COPIED!";
+    } catch (error) {
+      buttonText.textContent = "COPY NOT AVAILABLE";
+    }
+
+    setTimeout(() => {
+      buttonText.textContent = "COPY ADDRESS";
+    }, 2500);
+  });
+}
