@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171717">
+  <meta name="description" content="Order your Friedays favorites online!">
+  <title>Friedays Talavera | Your Favorite Fried Food</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <a class="logo" href="#">FRIEDAYS<span>.</span></a>
+      <a class="nav-order" href="#menu">Order Now</a>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">CRISPY • FRESH • DELICIOUS</p>
+      <h1>Your Cravings.<br><span>Our Specialty.</span></h1>
+      <p class="hero-description">
+        Enjoy your favorite chicken meals, snacks, and more at Friedays Talavera!
+      </p>
+      <a href="#menu" class="primary-button">Explore Our Menu</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="welcome section">
+      <p class="eyebrow">WELCOME TO FRIEDAYS</p>
+      <h2>Good Food, Good Mood!</h2>
+      <p>
+        From crispy chicken to delicious snacks, there's something for
+        everyone. Choose your favorites and prepare your order below.
+      </p>
+    </section>
+
+    <section class="menu-section section" id="menu">
+      <div class="section-heading">
+        <p class="eyebrow">MADE FOR YOUR CRAVINGS</p>
+        <h2>Our Menu</h2>
+        <p>Choose your favorites and add them to your cart.</p>
+      </div>
+
+      <div class="filters" id="filters">
+        <button class="filter active" data-category="all">All</button>
+        <button class="filter" data-category="chicken">Chicken</button>
+        <button class="filter" data-category="meals">Meals</button>
+        <button class="filter" data-category="snacks">Snacks</button>
+        <button class="filter" data-category="drinks">Drinks</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid"></div>
+    </section>
+
+    <section class="cart-section section" id="cart">
+      <div class="section-heading">
+        <p class="eyebrow">YOUR FAVORITES</p>
+        <h2>Your Cart</h2>
+        <p>Review your selected items before placing your order.</p>
+      </div>
+
+      <div class="cart-box">
+        <div id="cartItems">
+          <p class="empty-cart">Your cart is currently empty.</p>
+        </div>
+
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cartTotal">₱0.00</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="checkout-section section" id="checkout">
+      <div class="section-heading">
+        <p class="eyebrow">ALMOST THERE!</p>
+        <h2>Place Your Order</h2>
+        <p>Enter your details to prepare your order message.</p>
+      </div>
+
+      <form id="orderForm" class="order-form">
+        <label for="customerName">Full Name</label>
+        <input
+          type="text"
+          id="customerName"
+          placeholder="Enter your full name"
+          required
+        >
+
+        <label for="customerPhone">Contact Number</label>
+        <input
+          type="tel"
+          id="customerPhone"
+          placeholder="Enter your contact number"
+          required
+        >
+
+        <label for="orderType">Order Type</label>
+        <select id="orderType" required>
+          <option value="">Select order type</option>
+          <option value="Pickup">Pickup</option>
+          <option value="Dine-in">Dine-in</option>
+          <option value="Delivery - subject to availability">
+            Delivery - subject to availability
+          </option>
+        </select>
+
+        <label for="orderNotes">Additional Instructions (Optional)</label>
+        <textarea
+          id="orderNotes"
+          rows="3"
+          placeholder="Special requests or instructions..."
+        ></textarea>
+
+        <button type="submit" class="primary-button full-button">
+          Generate My Order
+        </button>
+      </form>
+
+      <div id="orderResult" class="order-result" hidden>
+        <h3>Your Order Message</h3>
+        <p>Copy this message and send it to Friedays to confirm your order.</p>
+        <pre id="orderMessage"></pre>
+        <button id="copyOrder" class="primary-button full-button" type="button">
+          Copy Order Message
+        </button>
+      </div>
+    </section>
+
+    <section class="promotions section">
+      <p class="eyebrow">MORE REASONS TO ENJOY</p>
+      <h2>Friedays Favorites</h2>
+      <p>
+        Explore our chicken meals, snacks, and drinks. Check with the store
+        for current promos, bundle deals, and special offers.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="logo" href="#">FRIEDAYS<span>.</span></a>
+    <p>Your Menu, One Scan Away!</p>
+    <p>Talavera, Nueva Ecija</p>
+    <a
+      href="https://www.facebook.com/share/1CFQBqySuD/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >Visit Friedays on Facebook</a>
+    <p class="copyright">© 2026 Friedays Talavera. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
